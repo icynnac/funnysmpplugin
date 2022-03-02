@@ -1,0 +1,11 @@
+name: SMP
+version: 1
+main: me.rllol.smp.SMP
+api-version: 1.18
+commands:
+  ping:
+    description: Get your ping from the server.
+  colorcodes:
+    description: Get color code guide.
+  help:
+    description: Help.
