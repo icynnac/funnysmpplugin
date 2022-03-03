@@ -10,6 +10,8 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.command.TabExecutor;
 import org.bukkit.entity.Player;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import static me.rllol.smp.util.messages.sendInteractiveMessage;
@@ -86,12 +88,13 @@ public class help implements TabExecutor {
                         p.sendMessage("§bWorld: " + p.getWorld().getName());
                         p.sendMessage("§6-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-");
                         break;
+                    case "plugins":
+
                 }
             } else {
                 p.sendMessage("§6-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-");
                 sendInteractiveMessage(p, "§a§lCommands", "/help commands", ClickEvent.Action.RUN_COMMAND, "§fClick to see §a§lCommands.");
                 sendInteractiveMessage(p, "§b§lServer Info", "/help sysinfo", ClickEvent.Action.RUN_COMMAND, "§fClick to see §b§lServer Info.");
-                sendInteractiveMessage(p, "§e§lPlugins", "/help plugins", ClickEvent.Action.RUN_COMMAND, "§fClick to see §e§lPlugins.");
                 p.sendMessage("§6-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-");
             }
         }
@@ -100,6 +103,7 @@ public class help implements TabExecutor {
 
     @Override
     public List<String> onTabComplete( CommandSender sender, Command command, String alias, String[] args) {
-        return null;
+        if (args.length == 1) new ArrayList<>(Arrays.asList("commands", "sysinfo"));
+        return new ArrayList<>();
     }
 }
