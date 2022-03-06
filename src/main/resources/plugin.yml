@@ -9,3 +9,7 @@ commands:
     description: Get color code guide.
   help:
     description: Help.
+  boop:
+    description: Boop!
+  heart:
+    description: LOVE.
