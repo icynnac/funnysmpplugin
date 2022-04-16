@@ -8,13 +8,17 @@ import me.rllol.smp.events.chatEvent;
 import me.rllol.smp.events.itemEvents;
 import me.rllol.smp.items.items;
 import org.bukkit.Bukkit;
+import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public final class SMP extends JavaPlugin {
 
+    public static Plugin plugin;
+
     @Override
     public void onEnable() {
         items.init();
+        plugin = this;
 
         getCommand("ping").setExecutor(new ping());
         getCommand("colorcodes").setExecutor(new colorsbook());
