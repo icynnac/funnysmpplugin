@@ -63,7 +63,9 @@ public class items {
         ItemMeta swordM = sword.getItemMeta();
         swordM.setDisplayName("§6§lBaked Potato Sword");
         ArrayList<String> swordL = new ArrayList<>();
-        swordL.add("§7An edible sword!");
+        swordL.add("§eAn edible sword!");
+        swordL.add("");
+        swordL.add("§7Restores 5 Hunger Bars.");
         swordM.setLore(swordL);
         sword.setItemMeta(swordM);
 
